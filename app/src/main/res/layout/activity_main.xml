@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    xmlns:sun="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/sample_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+        <com.dh.tiaoyitiao.SunView
+            android:id="@+id/sv"
+            android:layout_margin="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            sun:svMainColor="#FE8109"
+        sun:svTrackColor="#FE8109"
+        sun:svSunColor="#FED300"
+        sun:svSunRadius="9dp"
+        sun:svTrackWidth="1dp"
+        sun:svTextSize="10sp"
+        sun:svTextOffset="20dp"
+        sun:svPadding="10dp"/>
+
+    <EditText
+        android:layout_below="@id/sv"
+        android:id="@+id/hour"
+        android:hint="设置时"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:layout_toRightOf="@id/hour"
+        android:layout_below="@id/sv"
+        android:inputType="number"
+        android:id="@+id/minus"
+        android:hint="设置秒"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content" />
+    <Button
+        android:text="确定"
+        android:onClick="sure"
+        android:layout_below="@id/hour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</RelativeLayout>
