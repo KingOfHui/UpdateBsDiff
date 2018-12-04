@@ -71,8 +71,7 @@ public class MainActivity extends AppCompatActivity {
             try {
                 //1.下载差分包
                 Log.d("dh", "开始下载");
-//                File patchFile = DownloadUtils.download(Constants.URL_PATCH_DOWNLOAD);
-                File patchFile = new File(Constants.NEW_APK_PATH);
+                File patchFile = DownloadUtils.download(Constants.URL_PATCH_DOWNLOAD);
                 //获取当前应用的apk文件/data/app/app
                 String oldfile = ApkUtils.getSourceApkPath(MainActivity.this, getPackageName());
                 //2.合并得到最新版本的APK文件
